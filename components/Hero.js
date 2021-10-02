@@ -42,7 +42,6 @@ const Hero = () => {
                     but more useful than a life spent doing nothing.</p> */}
                     <img src="/images/quote.svg" alt="quote" />
 
-
                 </div>
 
             </div>
