@@ -24,7 +24,7 @@ const TestimonialsCard = ({ used }) => {
 
                 <div className="flex items-center justify-between">
                     <div className="">
-                        <p className="text-sm text-tagred p-2 bg-orangelight rounded-full">{used.tag}</p>
+                        <p className="text-sm text-tagred py-2 px-3 bg-orangelight rounded-full">{used.tag}</p>
                     </div>
                     <div className="flex items-center">
                         <div className="mr-2">
