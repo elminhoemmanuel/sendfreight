@@ -8,7 +8,7 @@ const Footer = () => {
     const contact = ["inquiry@thaapp.com", "1-800-200-300", "54 Curragh birin, Castletroy,Limerick, Ireland"]
 
     return (
-        <div className="py-12 px-6 md:px-24 bg-footerbg text-white">
+        <div className="py-16 px-6 md:px-24 bg-footerbg text-white">
             <div className="grid grid-cols-1 md:grid-cols-2">
                 <div className="flex flex-col justify-center pr-0 md:pr-28 mb-4">
                     <div className="mb-5">

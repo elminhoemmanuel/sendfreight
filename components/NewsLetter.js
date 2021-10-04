@@ -4,7 +4,7 @@ import Input from './Input'
 
 const NewsLetter = () => {
     return (
-        <div className="bg-graybg py-12 px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="bg-graybg py-16 px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-10">
             <div>
                 <div className="py-3">
                     <h1 className="text-2xl md:text-3xl text-header font-bold mb-5">Subscribe to our Newsletter</h1>

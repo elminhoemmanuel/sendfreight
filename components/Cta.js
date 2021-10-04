@@ -3,7 +3,7 @@ import PriBtn from './PriBtn'
 
 const Cta = () => {
     return (
-        <div className="py-12 px-6 md:px-24 ">
+        <div className="py-16 px-6 md:px-24 ">
             <div className="bg-orangelight rounded grid grid-cols-1 md:grid-cols-2 gap-6 p-8">
                 <div className="">
                     <h1 className="text-2xl text-header">Get started today sign up and</h1>
