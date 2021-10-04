@@ -86,7 +86,7 @@ const Navbar = () => {
             <div className='relative'>
                 <nav
                     className=
-                        'text-black flex items-center justify-between bg-white px-6 pt-8 pb-6 md:px-12 fixed top-0  w-full h-auto z-30 2xl:max-w-screen-2xl 2xl:mx-auto'
+                        'border-b border-gray-200 text-black flex items-center justify-between bg-white px-6 pt-8 pb-6 md:px-12 fixed top-0  w-full h-auto z-30 2xl:max-w-screen-2xl 2xl:mx-auto'
                    >
 
                     {/* Left side of Navigation Bar */}

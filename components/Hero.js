@@ -49,7 +49,7 @@ const Hero = () => {
                 <img src="/images/biz.svg" alt="hero image" className="w-4/5 h-full" />
                 <img src="/images/numcard.svg" alt="" className="absolute  top-32 right-6 h-20" />
                 <img src="/images/speedometer.svg" alt="" className="absolute top-12 left-0 h-16" />
-                <img src="/images/usercard.svg" alt="" className="absolute -bottom-8 -left-10 h-28 hidden md:inline" />
+                <img src="/images/usercard.svg" alt="" className="absolute -bottom-8 -left-10 h-28 hidden lg:inline" />
             </div>
         </div>
     )

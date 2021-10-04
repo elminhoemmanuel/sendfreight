@@ -13,6 +13,14 @@ module.exports = {
         orangelight:"#FFEBFF",
         header:"#303030",
         body:"#747474",
+        graytext:"#8D8D8D",
+        tagred:"#FF6634",
+        tagbg:"rgba(255, 102, 52, 0.05)",
+        testgray:"#FCFCFC",
+        graybg:"#F8F8F8",
+        brandsbg:"#FEFEFE",
+        advertbg:"#FBFBFB",
+        footerbg:"#1F2131",
         
       }
     },

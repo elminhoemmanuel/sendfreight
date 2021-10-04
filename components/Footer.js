@@ -1,62 +1,86 @@
 import React from 'react'
 import Link from 'next/link'
-import { footerData } from "./FooterData";
-import Image from 'next/image'
 
 const Footer = () => {
+
+    const company = ["About Us", "Contact Us", "Terms of Use", "Privacy Policy"]
+    const features = ["Timeline", "Peer Review", "Create Account", "Sign In"]
+    const contact = ["inquiry@thaapp.com", "1-800-200-300", "54 Curragh birin, Castletroy,Limerick, Ireland"]
+
     return (
-        <footer className="bg-sfsblue text-white px-6 md:px-16 lg:px-24 py-16 ">
-            <div className='flex flex-col md:flex-row md:items-center md:justify-center mb-20'>
-                <div className="mr-0 md:mr-6 mb-3 md:mb-0">
-                    <h1 className='text-white font-bold text-3xl text-left md:text-right'>Our</h1>
-                    <h1 className='text-white font-bold text-3xl text-left md:text-right'>Channels</h1>
-                </div>
-                <div>
-                    <p className='text-featurestext text-sm text-left'>Get access to sfs life using</p>
-                    <p className='text-featurestext text-sm text-left'>any of the following plaforms</p>
-                </div>
-            </div>
-            <div className="flex flex-col md:flex-row items-center">
-                <div className="w-full md:w-3/4">
-                    <div className='grid grid-cols-1 md:grid-cols-3 gap-2 divide-x-0 md:divide-x divide-gray-50'>
-                        {
-                            footerData.map(item => {
-                                return <div key={item.id} className="flex flex-col md:items-center md:justify-center mb-16 md:mb-0">
-                                    <div className="mb-3">
-                                        <Image width='60' height="60" src={item.iconUrl} alt="footer icons"/>
-                                    </div>
-                                    <Link href={item.link}>
-                                        <a className="flex items-center">
-                                            <div className={`mr-3 ${item.iconStyle}`}>
-                                                <Image width='25' height="25" src={item.downloadUrl} alt="download icon"/>
-                                            </div>
-                                            <div>
-                                                <p className="text-white text-sm">{item.upText} <span className='md:hidden'>{item.downText}</span></p>
-                                                <p className="text-white text-sm hidden md:block">{item.downText}</p>
-                                            </div>
-                                        </a>
-                                    </Link>
-                                    
-                                </div>
-                            })
-                        }
-
+        <div className="py-12 px-6 md:px-24 bg-footerbg text-white">
+            <div className="grid grid-cols-1 md:grid-cols-2">
+                <div className="flex flex-col justify-center pr-0 md:pr-28 mb-4">
+                    <div className="mb-5">
+                        <p className="text-sm">This platform for minority groups to express their opinions on employment, workplace experiences and rate employers. </p>
                     </div>
+                    <div className="flex items-center">
+                        <div className="mr-2">
+                            <Link href="/">
+                                <a className="block">
+                                    <img src="/images/facebook.svg" alt="facebook icon" />
+                                </a>
+                            </Link>
+                        </div>
+                        <div className="mr-2">
+                            <Link href="/">
+                                <a className="block">
+                                    <img src="/images/twitter.svg" alt="twitter icon" />
+                                </a>
+                            </Link>
 
+                        </div>
+                        <div className="mr-2">
+                            <Link href="/">
+                                <a className="block">
+                                    <img src="/images/instagram.svg" alt="instagram icon" />
+                                </a>
+                            </Link>
+
+                        </div>
+                    </div>
                 </div>
-                <div className="w-full md:w-1/4 text-sm rounded-md p-8 text-white bg-footeryellow">
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-3">
                     <div>
-                        <p className="mb-3">Contact us for more<br className="hidden md:block"/> infomation</p>
-                        <Link href="mailto:Info@sfsnigeria.com">
-                            <a className='mb-3 block'>Info@sfsnigeria.com</a>
-                        </Link>
-                        <Link href="tel:098-793 079-383">
-                            <a className='mb-3 block'>098-793 079-383</a>
-                        </Link>
+                        <h1 className="text-lg font-bold mb-5">Company</h1>
+                        {
+                            company.map(item => (
+                                <Link key={item} href="/">
+                                    <a className="block mb-2">
+                                        <p className="text-sm">{item}</p>
+                                    </a>
+                                </Link>
+                            ))
+                        }
+                    </div>
+
+                    <div>
+                        <h1 className="text-lg font-bold mb-5">Features</h1>
+                        {
+                            features.map(item => (
+                                <Link key={item} href="/">
+                                    <a className="block mb-2">
+                                        <p className="text-sm">{item}</p>
+                                    </a>
+                                </Link>
+                            ))
+                        }
+                    </div>
+
+                    <div>
+                        <h1 className="text-lg font-bold mb-5">Contact Us</h1>
+                        {
+                            contact.map(item => (
+                                
+                                <p key={item} className="text-sm mb-2">{item}</p>
+                                   
+                            ))
+                        }
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
     )
 }
 
