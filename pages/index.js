@@ -1,13 +1,8 @@
 import Head from 'next/head'
 import React, { useState, useEffect } from 'react'
+import Body from '../components/Body'
 import Navbar from '../components/Navbar'
-import Hero from '../components/Hero'
-import Reviews from '../components/Reviews'
-import NewsLetter from '../components/NewsLetter'
-import Brands from '../components/Brands'
-import Advert from '../components/Advert'
-import Cta from '../components/Cta'
-import Footer from '../components/Footer'
+
 
 
 
@@ -16,19 +11,14 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>BizRev</title>
-        <meta name="keywords" content="BizRev" />
+        <title>Send Freight</title>
+        <meta name="keywords" content="Send Freight" />
       </Head>
 
-      <div className='2xl:max-w-screen-2xl 2xl:mx-auto'>
+      <div className='home'>
         <Navbar />
-        <Hero />
-        <Reviews />
-        <NewsLetter />
-        <Brands />
-        <Advert />
-        <Cta />
-        <Footer />
+        <Body />
+        
         
       </div>
     </>

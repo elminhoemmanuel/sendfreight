@@ -1,0 +1,264 @@
+@import "./_variables.scss";
+
+// Navbar css stylings
+
+// stylings for horizontal navbar on large screens
+.navbar{
+    @include flex-center;
+    justify-content: space-between;
+    background: $blue;
+    padding: 1.2rem 2rem;
+
+    .nav-left{
+        @include flex-center;
+        width: 60%;
+
+        .logo-link{
+            @include link;
+            color: white;
+            padding-right: 8%;
+            display: block;
+    
+            .logo-box{
+                white-space: nowrap;
+            }
+    
+            .logo-send{
+                font-family: $poppins;
+                font-weight: bold;
+            }
+        }
+    
+        .search-holder{
+            position: relative;
+            width: 60%;
+    
+            .searchfield{
+                display: block;
+                width: 100%;
+                padding: 0.6rem 0.6rem;
+                @include input;
+                @include placeholder($navplaceholder);
+                color: $navplaceholder;
+            }
+
+            .search-icon{
+                position: absolute;
+                color:$navplaceholder;
+                top: 13%;
+                right: -2%;
+                width: 2rem;
+                height: 1.5rem;
+            }
+        }
+    }
+
+    .nav-right{
+        width: 40%;
+        @include flex-center;
+        justify-content: flex-end;
+
+        .req-btn{
+            @include btn;
+            background: transparent;
+            padding: 1.5% 5%;
+            display: block;
+            width: 30%;
+            border: 1px solid white;
+            margin-right: 4%;
+        
+        }
+        
+        .book-btn{
+            @include btn;
+            background: #5cc684;
+            padding: 1.5% 5%;
+            display: block;
+            width: 30%;
+            border: 1px solid #5cc684;
+        
+        } 
+
+    }
+
+}
+
+
+//css for vertical navbar on mobile
+.mobile-box{
+    transition: ease-in 0.5s!important;
+    left:-100%;
+    display: none;
+    transition-property: display;
+
+}
+
+.mobile-box-show{
+    display: block;
+    transition: ease-in 0.5s !important;
+    left: 0;
+    top: 0;
+    transition-property: display;
+    background: $blue;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 30;
+
+    .cancel-box{
+        @include flex-center;
+        justify-content: flex-end;
+        padding: 1rem;
+        margin-bottom: 4rem;
+        
+        .close-btn{
+            @include icon-btn;
+        }
+
+        .close-icon{
+            width: 2rem;
+            height: 2rem;
+            color: white;
+        }
+
+        .vert-nav{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        
+
+    }
+
+    .req-btn{
+        @include btn;
+        background: transparent;
+        padding: 1.5% 5%;
+        display: block;
+        width: 30%;
+        border: 1px solid white;
+    
+    }
+    
+    .book-btn{
+        @include btn;
+        background: #5cc684;
+        padding: 1.5% 5%;
+        display: block;
+        width: 30%;
+        border: 1px solid #5cc684;
+    
+    }
+
+    .holders{
+        @include flex-center;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+}
+
+
+
+
+  
+// media queries
+// MQ for large screens
+@media screen and (min-width: 1024px) {
+    .navbar{
+        .nav-left{
+
+        }
+
+        .nav-right{
+
+            .menu-btn{
+                @include hidden;
+            }
+        }
+    }
+
+    .mobile-box-show{
+        display: none;
+    }
+    
+}
+
+// MQ for medium screens
+@media screen and (min-width: 768px ) and (max-width: 1024px) {
+    .navbar{
+        .nav-left{
+            width: 50%;
+
+            
+        }
+    
+        .nav-right{
+            width: 50%;
+    
+            .req-btn{
+                padding: 1.5% 5%;
+                width: 40%;
+    
+            }
+    
+            .book-btn{
+                padding: 1.5% 5%;
+                width: 40%;
+    
+            }
+
+            .menu-btn{
+                @include hidden;
+            }
+    
+        }
+    
+    }
+
+    .mobile-box-show{
+        display: none;
+    }
+}
+
+// MQ for small screens
+@media screen and (max-width: 768px) {
+    .navbar{
+        padding: 1.2rem 0.8rem;
+
+        .nav-left{
+            width: 80%;
+            padding-right: 1%;
+
+            .search-holder{
+                width: 80%;
+            }
+
+            .logo-link{
+                .logo-freight{
+                    display: none !important;
+                }
+            }
+        }
+    
+        .nav-right{
+            width: 20%;
+    
+            .req-btn , .book-btn{
+                @include hidden;
+            }
+
+            .menu-btn{
+                @include icon-btn;
+
+                .hamburger{
+                    color: white;
+                    width: 2rem!important;
+                    height: 2rem;
+                }
+            }
+    
+        }
+    
+    }
+}

@@ -1,15 +1,15 @@
-### SFS Capital
+### Send Freight Quote Page
 
 A Landing page and Dashboard implementation.
 
 ### Technologies used: 
 * Next.js
 * React.js
-* Redux
-* Tailwindcss
+* CSS
+* SCSS
 
 ### How can this be viewed live?
-* This project is deployed live on Netlify and can be viewed at [here](https://sfscapital.netlify.app/)
+* This project is deployed live on Netlify and can be viewed at [here]()
 
 
 ### How can this be tested locally ?
