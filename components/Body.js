@@ -1,5 +1,8 @@
 import React from 'react'
 import { MdArrowBack } from "react-icons/md"
+import AdditionalCard from './AdditionalCard'
+import CargoCard from './CargoCard'
+import LocationCard from './LocationCard'
 import ServicesCard from './ServicesCard'
 
 const Body = () => {
@@ -20,6 +23,9 @@ const Body = () => {
 
                         <div className="sections">
                             <ServicesCard />
+                            <LocationCard />
+                            <CargoCard />
+                            <AdditionalCard />
                         </div>
                     </div>
                 </div>

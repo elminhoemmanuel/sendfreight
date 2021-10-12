@@ -6,6 +6,7 @@ $inputbg:rgba(236, 236, 236, 0.541);
 $navplaceholder:#f5f1f1;
 $header:#27282a;
 $text:#a2a3a7;
+$border:#d5d5d6;
 $basefont: 1rem;
 $curve: 5px;
 
@@ -16,6 +17,7 @@ $curve: 5px;
     border-radius: $curve;
     transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     padding: 1.5rem 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 @mixin hidden {
@@ -65,4 +67,38 @@ $curve: 5px;
     background: none !important;
     border: none;
     cursor: pointer;
+    padding: 0 !important;
+}
+
+@mixin impexp {
+    background: transparent;
+    width: 50%;
+    border: none;
+    padding: 5% 2%;
+    cursor: pointer;
+}
+
+@mixin greyinputs {
+    @include input;
+    @include placeholder(#aeb0b3);
+    color: #aeb0b3;
+    border-radius: 3px;
+    display: block;
+}
+
+@mixin adornment {
+    position: absolute;
+    top: 19%;
+    left: 2%;
+    @include flex-center;
+    width: 20%;
+
+    .adorn-icon{
+        @include icon(1.8rem);
+    }
+}
+
+@mixin icon($dim) {
+    width: $dim;
+    height: $dim;
 }
