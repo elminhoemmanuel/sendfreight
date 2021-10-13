@@ -21,7 +21,7 @@
         .back-icon{
             @include icon(2rem);
             position: absolute;
-            top: 5%;
+            top: 1.3rem;
             left: 0;
         }
     }
@@ -138,8 +138,8 @@
             position: relative;
 
             .grayinputs{
-                width: 76%;
-                padding: 5% 2% 5% 22%;
+                width: 73%;
+                padding: 5% 2% 5% 25%;
                 @include greyinputs;
             }
 
@@ -152,8 +152,8 @@
             position: relative;
 
             .grayinputs{
-                width: 83.5%;
-                padding: 5% 2% 5% 15%;
+                width: 80.5%;
+                padding: 5% 2% 5% 18%;
                 @include greyinputs;
             }
 
@@ -437,6 +437,14 @@
             }
         }
     }
+
+    .location-card{
+        padding-bottom: 4.5rem !important;
+    }
+
+    .textfields-box, .tabs{
+        width: 100% !important;
+    }
 }
 
 // MQ for medium screens
@@ -517,17 +525,17 @@
         }
 
         .adornment{
-            top: 14% !important;
+            top: 12% !important;
         }
     }
     .loc-item-3{
         .grayinputs{
-            width: 77% !important;
-            padding: 5% 2% 5% 20% !important;
+            width: 75% !important;
+            padding: 5% 2% 5% 22% !important;
         }
 
         .adornment{
-            top: 12.5% !important;
+            top: 10.5% !important;
         }
     }
 
